@@ -4,60 +4,228 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Keshav | AWS & DevOps Engineer</title>
+
+<meta name="description" content="Keshav's professional portfolio showcasing hands-on AWS, DevOps, Jenkins, Docker, Kubernetes, Terraform and Azure DevOps projects.">
+
 <style>
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
   font-family: Arial, sans-serif;
   background: #0b1220;
-  color: white;
+  color: #f8fafc;
+  line-height: 1.7;
 }
+
 header {
   background: #111c30;
-  padding: 20px;
-  text-align: center;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
-nav a {
+
+header h2 {
   color: #38bdf8;
-  margin: 12px;
+  font-size: 21px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+nav a {
+  color: #e2e8f0;
   text-decoration: none;
+  font-size: 14px;
 }
+
+nav a:hover {
+  color: #38bdf8;
+}
+
 .hero {
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 85px 20px;
+  padding: 90px 20px;
+  background: linear-gradient(135deg, #0b1220, #142b49);
 }
-h1 { font-size: 42px; }
-h1 span { color: #38bdf8; }
-section {
-  padding: 45px 10%;
+
+.hero h1 {
+  font-size: clamp(32px, 6vw, 52px);
+  margin-bottom: 10px;
 }
-.card {
-  background: #17243a;
-  padding: 22px;
-  margin: 15px 0;
-  border-radius: 12px;
+
+.hero h1 span {
+  color: #38bdf8;
 }
-.card h3 { color: #38bdf8; }
+
+.hero h2 {
+  color: #cbd5e1;
+  font-size: 23px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  color: #94a3b8;
+  margin-bottom: 25px;
+}
+
 .button {
   display: inline-block;
   background: #0284c7;
   color: white;
-  padding: 12px 22px;
+  padding: 12px 24px;
   border-radius: 8px;
   text-decoration: none;
+  margin: 7px;
+  font-weight: bold;
+  transition: 0.3s;
 }
+
+.button:hover {
+  background: #0369a1;
+  transform: translateY(-3px);
+}
+
+.button-outline {
+  background: transparent;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+}
+
+section {
+  padding: 65px 10%;
+  scroll-margin-top: 85px;
+}
+
+section h2 {
+  font-size: 30px;
+  margin-bottom: 25px;
+  color: #38bdf8;
+  text-align: center;
+}
+
+.card {
+  background: #17243a;
+  padding: 25px;
+  margin: 18px 0;
+  border-radius: 12px;
+  border: 1px solid #263b56;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #38bdf8;
+}
+
+.card h3 {
+  color: #38bdf8;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: #cbd5e1;
+  margin-bottom: 10px;
+}
+
+.skills-grid,
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+}
+
+.skill {
+  background: #17243a;
+  padding: 17px;
+  text-align: center;
+  border-radius: 9px;
+  border: 1px solid #263b56;
+  color: #e2e8f0;
+}
+
+.project-link {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+.contact-links a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
+}
+
+.availability {
+  color: #4ade80;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
 footer {
   text-align: center;
   padding: 25px;
   background: #111c30;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+@media (max-width: 650px) {
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  section {
+    padding: 45px 6%;
+  }
+
+  .hero {
+    padding: 70px 15px;
+  }
 }
 </style>
 </head>
+
 <body>
 
 <header>
-  <h2>KESHAV | DEVOPS PORTFOLIO</h2>
+  <h2>KESHAV | DEVOPS</h2>
+
   <nav>
+    <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
@@ -65,88 +233,274 @@ footer {
   </nav>
 </header>
 
-<div class="hero">
+<!-- HOME SECTION -->
+<div class="hero" id="home">
+
   <h1>Hello, I'm <span>Keshav</span></h1>
+
   <h2>Aspiring AWS & DevOps Engineer</h2>
-  <p>Cloud | CI/CD | Docker | Kubernetes | Automation</p>
-  <a class="button" href="#projects">Explore My Projects</a>
+
+  <p>
+    DevOps Trainee | AWS Cloud | CI/CD Automation |
+    Docker | Kubernetes
+  </p>
+
+  <p>
+    Building practical cloud infrastructure and
+    automated deployment solutions.
+  </p>
+
+  <div>
+    <a href="#projects" class="button">
+      Explore My Projects
+    </a>
+
+    <a href="#contact" class="button button-outline">
+      Contact Me
+    </a>
+  </div>
+
+  <p class="availability">
+    Open to Entry-Level Opportunities & Internships
+  </p>
+
 </div>
 
+<!-- ABOUT SECTION -->
 <section id="about">
+
   <h2>About Me</h2>
-  <div class="card">
-    <p>I am a DevOps Trainee at DevOps Academy Pvt. Ltd.
-    I have hands-on project experience in AWS, Linux,
-    Jenkins, Azure DevOps, Docker, Kubernetes,
-    Terraform and Ansible.</p>
-    <p>I am looking for entry-level AWS and DevOps
-    opportunities and internships.</p>
-  </div>
-</section>
-
-<section id="skills">
-  <h2>Technical Skills</h2>
-  <div class="card">
-    <p>AWS | Linux | Ubuntu | Git | GitHub | Jenkins |
-    Maven | Docker | Kubernetes | Terraform |
-    Ansible | Azure DevOps | Python | SQL | CI/CD</p>
-  </div>
-</section>
-
-<section id="projects">
-  <h2>My Projects</h2>
 
   <div class="card">
-    <h3>1. Jenkins Docker CI/CD</h3>
-    <p>Created a Jenkins pipeline integrated with GitHub
-    to build Docker images and deploy a Tomcat application.</p>
-  </div>
 
-  <div class="card">
-    <h3>2. Azure DevOps Java CI Pipeline</h3>
-    <p>Created a Java CI pipeline using Maven, configured
-    Java 25, executed tests and published build artifacts.</p>
-  </div>
-
-  <div class="card">
-    <h3>3. Docker CI/CD with Render</h3>
-    <p>Built Docker images, pushed them to Docker Hub
-    and deployed an application using Render.</p>
-  </div>
-
-  <div class="card">
-    <h3>4. Kubernetes on GKE</h3>
-    <p>Deployed Nginx applications, scaled replicas,
-    configured LoadBalancer and practiced rollbacks.</p>
-  </div>
-
-  <div class="card">
-    <h3>5. AWS Cloud Infrastructure</h3>
-    <p>Created VPC, subnets, Internet Gateway,
-    route tables, security groups and EC2 instances.</p>
-  </div>
-
-  <div class="card">
-    <h3>6. Ansible Automation</h3>
-    <p>Configured Linux and Windows communication
-    using Ansible and WinRM for automated file copying.</p>
-  </div>
-</section>
-
-<section id="contact">
-  <h2>Contact Me</h2>
-  <div class="card">
-    <p>GitHub:
-      <a href="https://github.com/keshavjachar">
-      github.com/keshavjachar</a>
+    <p>
+      I am a DevOps Trainee at DevOps Academy Pvt. Ltd.
+      and an aspiring AWS & DevOps Engineer.
     </p>
-    <p>Email: Add your email address</p>
-    <p>LinkedIn: Add your LinkedIn profile URL</p>
+
+    <p>
+      I have hands-on project experience working with
+      AWS cloud infrastructure, Linux administration,
+      Jenkins CI/CD, Docker, Kubernetes, Terraform,
+      Ansible and Azure DevOps.
+    </p>
+
+    <p>
+      I enjoy learning cloud technologies, automating
+      deployment processes and building practical
+      DevOps solutions.
+    </p>
+
+    <p>
+      I am actively looking for entry-level AWS Cloud
+      Engineer, DevOps Engineer, Cloud Engineer Trainee
+      and DevOps Internship opportunities.
+    </p>
+
   </div>
+
+</section>
+
+<!-- SKILLS SECTION -->
+<section id="skills">
+
+  <h2>Technical Skills</h2>
+
+  <div class="skills-grid">
+
+    <div class="skill">AWS Cloud</div>
+    <div class="skill">Linux & Ubuntu</div>
+    <div class="skill">Git & GitHub</div>
+    <div class="skill">Jenkins</div>
+    <div class="skill">Maven</div>
+    <div class="skill">Docker</div>
+    <div class="skill">Kubernetes</div>
+    <div class="skill">Terraform</div>
+    <div class="skill">Ansible</div>
+    <div class="skill">Azure DevOps</div>
+    <div class="skill">Python</div>
+    <div class="skill">SQL & MariaDB</div>
+    <div class="skill">CI/CD Pipelines</div>
+    <div class="skill">Tomcat</div>
+    <div class="skill">GCP / GKE</div>
+
+  </div>
+
+</section>
+
+<!-- PROJECTS SECTION -->
+<section id="projects">
+
+  <h2>Hands-on Projects</h2>
+
+  <div class="projects-grid">
+
+    <div class="card">
+      <h3>1. Jenkins Docker CI/CD</h3>
+
+      <p>
+        Built a Jenkins CI/CD pipeline integrated
+        with GitHub to build Docker images and deploy
+        a Java web application using Tomcat.
+      </p>
+
+      <p><strong>Technologies:</strong>
+        Jenkins, GitHub, Docker, Tomcat, Java
+      </p>
+
+      <a class="project-link"
+         href="https://github.com/keshavjachar-create"
+         target="_blank"
+         rel="noopener noreferrer">
+        View GitHub Profile →
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>2. Azure DevOps Java CI Pipeline</h3>
+
+      <p>
+        Created a Java CI pipeline using Maven.
+        Configured Java 25, executed JUnit tests
+        and published build artifacts.
+      </p>
+
+      <p><strong>Technologies:</strong>
+        Azure DevOps, Java, Maven, YAML, JUnit
+      </p>
+
+      <a class="project-link"
+         href="https://dev.azure.com/keshavjachar"
+         target="_blank"
+         rel="noopener noreferrer">
+        Azure DevOps →
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>3. Docker CI/CD with Render</h3>
+
+      <p>
+        Built Docker images, pushed the image to
+        Docker Hub and deployed a containerized
+        application using Render.
+      </p>
+
+      <p><strong>Technologies:</strong>
+        Docker, Docker Hub, Azure DevOps, Render
+      </p>
+
+      <a class="project-link"
+         href="https://azure-docker-cicd-latest.onrender.com"
+         target="_blank"
+         rel="noopener noreferrer">
+        View Live Application →
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>4. Kubernetes on GKE</h3>
+
+      <p>
+        Deployed Nginx applications on Google
+        Kubernetes Engine, scaled replicas,
+        configured LoadBalancer and practiced
+        rolling updates and rollbacks.
+      </p>
+
+      <p><strong>Technologies:</strong>
+        GCP, GKE, Kubernetes, Nginx, kubectl
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>5. AWS Cloud Infrastructure</h3>
+
+      <p>
+        Created AWS cloud infrastructure using
+        VPC, public and private subnets, Internet
+        Gateway, route tables, security groups
+        and EC2 instances.
+      </p>
+
+      <p><strong>Technologies:</strong>
+        AWS, VPC, EC2, Networking, Linux
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>6. Ansible Automation</h3>
+
+      <p>
+        Configured Linux and Windows communication
+        using Ansible and WinRM. Automated file
+        copying between Linux and Windows using
+        a systemd service.
+      </p>
+
+      <p><strong>Technologies:</strong>
+        Ansible, Linux, Windows Server, WinRM
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact">
+
+  <h2>Contact Me</h2>
+
+  <div class="card contact-links">
+
+    <p>
+      <strong>GitHub:</strong>
+      <a href="https://github.com/keshavjachar-create"
+         target="_blank"
+         rel="noopener noreferrer">
+        Visit My GitHub
+      </a>
+    </p>
+
+    <p>
+      <strong>LinkedIn:</strong>
+      <a href="https://www.linkedin.com/in/keshav-murthy-j-556062370/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Connect with Me on LinkedIn
+      </a>
+    </p>
+
+    <p>
+      <strong>Email:</strong>
+      Add your professional email address
+    </p>
+
+    <p>
+      <strong>Location:</strong>
+      Bengaluru, Karnataka, India
+    </p>
+
+    <p class="availability">
+      Open to Work | Immediate Joiner
+    </p>
+
+  </div>
+
 </section>
 
 <footer>
-  <p>© 2026 Keshav | AWS & DevOps Engineer Portfolio</p>
+
+  <p>
+    © 2026 Keshav | AWS & DevOps Engineer Portfolio
+  </p>
+
+  <p>
+    Designed and developed to showcase my
+    hands-on cloud and DevOps projects.
+  </p>
+
 </footer>
 
 </body>
